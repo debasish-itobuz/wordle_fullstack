@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Wordle</title>
+</head>
+
+<body class="bg-black">
+    <nav class="p-3 border-b-2 mb-8">
+        <h1 class="font-bold text-center text-4xl text-white">Wordle</h1>
+    </nav>
+    <section class="w-100 h-screen flex flex-col items-center gap-12">
+        <div class="board gap-1 w-[400px] h-[400px] flex flex-col">
+            <div class="row gap-1 flex h-full">
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+            </div>
+            <div class="row gap-1 flex h-full">
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+            </div>
+            <div class="row gap-1 flex h-full">
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+            </div>
+            <div class="row gap-1 flex h-full">
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+            </div>
+            <div class="row gap-1 flex h-full">
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+            </div>
+            <div class="row gap-1 flex h-full">
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+                <div
+                    class="border h-full w-full border-1 border-neutral-600 text-white flex justify-center items-center font-bold text-2xl">
+                </div>
+            </div>
+        </div>
+        <div id="result" class="invisible text-white">Better Luck next Time...   Answer is : </div>
+        <div class="keyboard flex flex-col items-center gap-4">
+            <div class="line1 gap-4 flex text-white ">
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    Q
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    W
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    E
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    R
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    T
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    Y
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    U
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    I
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    O
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    P
+                </div>
+            </div>
+            <div class="line1 gap-4 flex text-white">
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    A
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    S
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    D
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    F
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    G
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    H
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    J
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    K
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    L
+                </div>
+            </div>
+            <div class="line1 gap-4 flex text-white">
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[5rem] flex justify-center items-center rounded-lg" role="button">
+                    Enter
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    Z
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    X
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    C
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    V
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    B
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    N
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[2.5rem] flex justify-center items-center rounded-lg" role="button">
+                    M
+                </div>
+                <div class="px-1 py-2 bg-slate-600 h-[3rem] w-[5rem] flex justify-center items-center rounded-lg" role="button">
+                    Del
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
